@@ -21,7 +21,7 @@ Vous verrez la section ConnectionStrings qui définit les chaînes de connexion 
 
       "ConnectionStrings":
       {
-        "DefaultConnection": "Server=.;Database=YOUR DATABASE NAME;Trusted_Connection=True;MultipleActiveResultSets=true"
+        "DefaultConnection": "Server=.;Database=VOTRE BASE DE DONNÉES;Trusted_Connection=True;MultipleActiveResultSets=true"
       }
 
 Il existe différentes versions de MSSQL (veuillez utiliser MSSQL pour ce projet et non une autre base de données). Lors de la configuration du serveur de base de données, certains paramètres peuvent modifier la configuration, de sorte que les chaînes de connexion définies pourraient ne pas fonctionner.
@@ -30,7 +30,7 @@ Les chaînes de connexion définies dans le projet sont configurées pour MSSQL 
 
 Si vous avez installé MSSQL Express, la valeur à utiliser pour Server est probablement .\SQLEXPRESS. Donc votre chaîne de connexion à la base de données serait : -
 
-    "DefaultConnection": "Server=.\SQLEXPRESS;Database=YOUR DATABASE NAME;Trusted_Connection=True;MultipleActiveResultSets=true"
+    "DefaultConnection": "Server=.\SQLEXPRESS;Database=VOTRE BASE DE DONNÉES;Trusted_Connection=True;MultipleActiveResultSets=true"
 
 
 Vous devrez implémenter l’authentification et l’autorisation JWT avec **Microsoft Identity**. 

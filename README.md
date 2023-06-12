@@ -1,39 +1,38 @@
-# DotNetEnglishP7
-Student repo for Project 7 of the Back-end developer: .NET path
+# DotNetFrançaisP7
+Dépôt de l’étudiant pour le projet 7 du parcours Développeur back-end.NET
 
-The project requires the creation of a database using the Entity Framework Code-First approach. 
+La création d'une base de données avec l’approche Code-first d’Entity Framework est nécessaire à la réalisation de ce projet. 
 
-Create the entities as outlined in the PDF linked in the Project 7 Course details. Then use Entity Framework's Code-First approach to create the database and all tables required. 
+Créez les entités comme indiqué dans le document PDF associé aux informations du projet 7. Utilisez ensuite Entity Framework Code-First pour créer la base de données ainsi que toutes les tables nécessaires. 
 
-In order for the database to be correctly created, you must meet the prerequisites below and change the connection strings to point to the MSSQL Server running on you your local PC.
+Pour créer correctement la base de données, vous devez satisfaire aux prérequis ci-dessous et modifier les chaînes de connexion pour qu'elles pointent vers le serveur MSSQL fonctionnant sur votre PC local.
 
-**Prerequisites**: MSSQL Developer 2019 or Express 2019 has been installed along with Microsoft SQL Server Management Studio (SSMS).
+**Prérequis** : MSSQL Developer 2019 ou Express 2019 a été installé ainsi que Microsoft SQL Server Management Studio (SSMS).
 
-MSSQL: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+MSSQL : https://www.microsoft.com/fr-fr/sql-server/sql-server-downloads
 
-SSMS: https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+SSMS : https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
 
-*Note: earlier versions of MSSQL Server should work fine, but have not been tested.
+*Remarque : les versions antérieures de MSSQL Server devraient fonctionner sans problèmes, mais elles n’ont pas été testées.
 
-*In the P7CreateRestApi project, open the appsettings.json file.*
+*Dans le projet P7CreateRestApi, ouvrez le fichier appsettings.json file.*
 
-You will see the ConnectionStrings section which defines the connection strings for the database used in this application.
+Vous verrez la section ConnectionStrings qui définit les chaînes de connexion pour la base de données utilisée dans cette application.
 
       "ConnectionStrings":
       {
         "DefaultConnection": "Server=.;Database=YOUR DATABASE NAME;Trusted_Connection=True;MultipleActiveResultSets=true"
       }
 
-There are different versions of MSSQL (please use MSSQL for this project and not another database) and when setting up the database server, there are different options that will change the configuration, so the connection strings defined may not work.
+Il existe différentes versions de MSSQL (veuillez utiliser MSSQL pour ce projet et non une autre base de données). Lors de la configuration du serveur de base de données, certains paramètres peuvent modifier la configuration, de sorte que les chaînes de connexion définies pourraient ne pas fonctionner.
 
-The connection strings defined in the project are setup for MSSQL Server Standard 2019. The installation has not created an instance name, so the server is just referred to as "." which means the default instance of MSSQL server running on the current machine. The built in Windows user which should be setup in MSSQL server by default during installation.
+Les chaînes de connexion définies dans le projet sont configurées pour MSSQL Server Standard 2019. L’installation n’ayant pas créé de nom d’instance, le serveur est simplement désigné par « . », ce qui signifie l’instance par défaut du serveur MSSQL en cours d’exécution sur la machine actuelle. Pendant l’installation, c’est l’utilisateur intégré de Windows qui est configuré dans le serveur MSSQL par défaut.
 
-If you have installed MSSQL Express, the value to use for Server is most likely .\SQLEXPRESS, so for example, your database  connection string would be: -
+Si vous avez installé MSSQL Express, la valeur à utiliser pour Server est probablement .\SQLEXPRESS. Donc votre chaîne de connexion à la base de données serait : -
 
     "DefaultConnection": "Server=.\SQLEXPRESS;Database=YOUR DATABASE NAME;Trusted_Connection=True;MultipleActiveResultSets=true"
 
 
-You will need to implement **JWT Authentication** and **Authorization** using **Microsoft Identity**. 
+Vous devrez implémenter l’authentification et l’autorisation JWT avec **Microsoft Identity**. 
 
-If you have trouble connecting, first try to connection using Microsoft SQL Server Management Studio (make sure authentication type  is "Windows Authentication"), or refer to https://sqlserver-help.com/2011/06/19/help-whats-my-sql-server-name/.
-If you still have trouble, please ask your mentor for assistance.
+Si vous rencontrez des difficultés de connexion, essayez d’abord de vous connecter avec Microsoft SQL Server Management Studio (assurez-vous que le type d’authentification est « authentification Windows »), ou consultez le site https://sqlserver-help.com/2011/06/19/help-whats-my-sql-server-name/. Si le problème persiste, demandez de l’aide à votre mentor.
